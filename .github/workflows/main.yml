@@ -12,7 +12,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 21.x
-          cache: npm
-          
-- run: npm install --frozen-lockfile
-- run: npx run lint && npx run build 
+
+      - run: npm install --frozen-lockfile
+      - run: npx run lint && npx run build 
