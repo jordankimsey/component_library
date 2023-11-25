@@ -1,0 +1,20 @@
+{
+  "name": "component_library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc"
+  },
+  "author": "Jordan Kimsey",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2"
+  }
+}
