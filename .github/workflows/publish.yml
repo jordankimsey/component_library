@@ -7,17 +7,20 @@ on:
 concurrency: ${{ github.workflow}}-${{ github.ref }}
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-              with:
-                node-version: 21.x
-            
-            - run: npm install --frozen-lockfile
-            - name: Create Release Pull Request or Publish
-              id: changesets
-              uses: changesets/action@v1
-              with:
-                publish: npm run build
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 21.x
+
+      - run: npm install --frozen-lockfile
+      - name: Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
