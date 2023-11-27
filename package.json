@@ -1,5 +1,5 @@
 {
-  "name": "component_library",
+  "name": "@jordan_kimsey/component_library",
   "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
