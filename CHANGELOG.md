@@ -1,5 +1,11 @@
 # component_library
 
+## 1.0.3
+
+### Patch Changes
+
+- 5f405c5: Update token
+
 ## 1.0.2
 
 ### Patch Changes
